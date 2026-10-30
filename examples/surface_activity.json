@@ -1,0 +1,15 @@
+{
+  "inputs": [
+    {"column": "tail_length", "alias": "Tail length"},
+    {"column": "sequence", "alias": "Peptide sequence"},
+    {"column": "pH"}
+  ],
+  "outputs": [
+    {"column": "surface_active", "alias": "Surface active"}
+  ],
+  "additional_context": "Predict the surface activity from the supplied examples. Every candidate is a peptide amphiphile with an N-terminal C16 tail and a tripeptide headgroup. Measurements at pH 3 use citrate buffer, measurements at pH 7 use phosphate buffer, and measurements at pH 11 use Tris buffer. A peptide is considered surface active if it has a surface tension value below 50 mN/m.",
+  "decision_question": "Is the peptide C{tail_length}-{sequence} surface active at pH {pH}?",
+  "allowed_labels": {
+    "surface_active": ["false", "true"]
+  }
+}

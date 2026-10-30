@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    {"column": "sequence", "alias": "Peptide sequence"}
+  ],
+  "outputs": [
+    {"column": "activity_class", "alias": "Breast-cancer activity class"}
+  ],
+  "additional_context": "Predict the measured breast-cancer activity class from the supplied examples. Every candidate is an anticancer peptide assayed against breast-cancer cell lines. The allowed labels are experimentally_inactive, moderately_active, and very_active. Preserve exact sequence case and modified-residue notation.",
+  "decision_question": "What is the breast-cancer activity class of the peptide {sequence}?",
+  "allowed_labels": {
+    "activity_class": [
+      "experimentally_inactive",
+      "moderately_active",
+      "very_active"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "results_dir": "results/paper/local",
+  "seed": 42,
+  "device": "cuda",
+  "llm_replicates": 5,
+  "baseline_replicates": 100,
+  "models": {},
+  "baseline_options": {
+    "tabpfn": {
+      "checkpoint_path": null,
+      "allow_download": true
+    },
+    "tabfm": {
+      "checkpoint_path": null,
+      "allow_download": true
+    }
+  }
+}

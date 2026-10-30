@@ -1,0 +1,41 @@
+[project]
+name = "icl-agent"
+version = "0.1.0"
+description = "Predict text outputs and decisions from labeled examples with the OpenAI Agents SDK and Decisions API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28",
+    "openai>=3.37.0",
+    "openai-agents>=0.22.0",
+    "pydantic>=2.13.5",
+    "python-dotenv>=1.2.3",
+]
+
+[project.optional-dependencies]
+experiments = [
+    "numpy>=2.0",
+    "scikit-learn>=1.5",
+    "xgboost>=2.1",
+    "matplotlib>=3.9",
+]
+tabpfn = ["tabpfn>=6.0"]
+tabfm = ["tabfm[pytorch] @ git+https://github.com/google-research/tabfm.git"]
+
+[project.scripts]
+icl-agent = "icl_agent.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.12.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.6",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [".", "src"]
+testpaths = ["tests"]

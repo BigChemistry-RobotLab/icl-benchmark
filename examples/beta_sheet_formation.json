@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    {"column": "sequence", "alias": "Peptide sequence"}
+  ],
+  "outputs": [
+    {"column": "beta_sheet_formation_class", "alias": "Beta-sheet formation class"}
+  ],
+  "additional_context": "Predict the experimental beta-sheet formation class from the supplied examples. A label of true indicates that the peptide sequence forms beta-sheets, while false marks that it does not form beta-sheets.",
+  "decision_question": "Does the peptide {sequence} form a beta sheet?",
+  "allowed_labels": {
+    "beta_sheet_formation_class": ["false", "true"]
+  }
+}

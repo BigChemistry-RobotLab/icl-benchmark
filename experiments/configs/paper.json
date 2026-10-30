@@ -1,0 +1,18 @@
+{
+  "results_dir": "results/paper",
+  "seed": 42,
+  "device": "cpu",
+  "llm_replicates": 5,
+  "baseline_replicates": 100,
+  "models": {},
+  "baseline_options": {
+    "tabpfn": {
+      "checkpoint_path": null,
+      "allow_download": false
+    },
+    "tabfm": {
+      "checkpoint_path": null,
+      "allow_download": false
+    }
+  }
+}

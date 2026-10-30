@@ -1,0 +1,9 @@
+{
+  "results_dir": "results/xgboost",
+  "seed": 42,
+  "device": "cpu",
+  "llm_replicates": 5,
+  "baseline_replicates": 100,
+  "models": {},
+  "baseline_options": {}
+}

@@ -1,0 +1,13 @@
+{
+  "inputs": [
+    {"column": "sequence", "alias": "Peptide sequence"}
+  ],
+  "outputs": [
+    {"column": "self_assembly_label", "alias": "Self-assembly label"}
+  ],
+  "additional_context": "Predict whether a peptide self-assembles from the supplied examples.Label 1 means the peptide self-assembles; label 0 means it does not. Preserve exact sequence case and modified-residue notation such as P'.",
+  "decision_question": "Does the peptide {sequence} self-assemble?",
+  "allowed_labels": {
+    "self_assembly_label": ["false", "true"]
+  }
+}

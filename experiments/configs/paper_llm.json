@@ -1,0 +1,42 @@
+{
+  "results_dir": "results/paper/llm",
+  "seed": 42,
+  "device": "cpu",
+  "llm_replicates": 5,
+  "baseline_replicates": 100,
+  "models": {
+    "openai/gpt-6.1-sol": {
+      "type": "llm",
+      "context_window": 1050000,
+      "input_usd_per_million": 2.0,
+      "output_usd_per_million": 10.0
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "type": "llm",
+      "context_window": 1048576,
+      "reasoning_effort": "low",
+      "input_usd_per_million": 0.01368,
+      "output_usd_per_million": 0.891
+    },
+    "google/gemma-4-31b-it": {
+      "type": "llm",
+      "context_window": 262144,
+      "input_usd_per_million": 0.2,
+      "output_usd_per_million": 0.4
+    },
+    "typesafe/jev-1.14": {
+      "type": "decision",
+      "context_window": 262144,
+      "max_questions": 200,
+      "input_usd_per_million": 0.042,
+      "output_usd_per_million": 0.0
+    },
+    "openai/gpt-6-luna-decisions": {
+      "type": "decision",
+      "context_window": 1050000,
+      "max_questions": 200,
+      "input_usd_per_million": 0.1,
+      "output_usd_per_million": 0.0
+    }
+  }
+}
